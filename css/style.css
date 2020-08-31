@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+header h1 {
+  text-align: center;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
