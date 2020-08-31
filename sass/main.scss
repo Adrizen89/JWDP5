@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+
+header{
+    h1{
+        text-align: center;
+    }
+    nav{
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
