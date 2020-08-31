@@ -1,9 +1,18 @@
 * {
   margin: 0;
+  font-family: "Finger Paint";
 }
 
-header h1 {
-  text-align: center;
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+header img {
+  width: 300px;
+}
+header nav {
+  width: 100%;
 }
 header nav ul {
   display: flex;
@@ -14,6 +23,49 @@ header nav ul li {
 }
 header nav ul li a {
   text-decoration: none;
+}
+
+main section article {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+main section article img {
+  width: 15%;
+  margin-left: 30px;
+}
+main section article h2 {
+  width: 20%;
+  font-size: 1.4em;
+}
+main section article p {
+  width: 30%;
+  font-size: 1em;
+}
+main section article button {
+  margin: auto;
+  font-size: 1.2em;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 42px;
+  border: 5px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-size: 20px;
+  padding: 30px 60px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+main section article button:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+main section article button:active {
+  position: relative;
+  top: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
