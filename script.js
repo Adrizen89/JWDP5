@@ -3,15 +3,24 @@ fetch("http://localhost:3000/api/furniture/")
 .then(reponse => {
     console.log(reponse)
     reponse.forEach(element => {
-        let produit1 = document.getElementById('main');
+        let produit = document.getElementById('main');
         let img = document.createElement('img'); 
         img.src = element.imageUrl;
-        produit1.append(img);
+        produit.append(img);
+        
+        let nameProduit = document.createElement('h2');
+        nameProduit.textContent = element.name
+        produit.append(nameProduit);
+
+        let prixProduit = document.createElement('p');
+        prixProduit.textContent =  element.price+"€"
+        produit.append(prixProduit);
+
 
         let savoirPlus = document.createElement('a');
         savoirPlus.textContent = "Savoir plus"
         savoirPlus.href = "produit.html?id="+element._id
-        produit1.append(savoirPlus);
+        produit.append(savoirPlus);
     });
 })
 
