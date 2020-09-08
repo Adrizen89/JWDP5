@@ -1,30 +1,21 @@
-//Lien avec l'API
+fetch("http://localhost:3000/api/furniture/")
+.then(reponse => reponse.json())
+.then(reponse => {
+    console.log(reponse)
+    reponse.forEach(element => {
+        let produit1 = document.getElementById('main');
+        let img = document.createElement('img'); 
+        img.src = element.imageUrl;
+        produit1.append(img);
 
-/*const { request } = require("express");
-
-getAllFurniture = () => {
-    return new Promise((resolve) =>{
-        let request = new XMLHttpRequest() {
-            if (
-                this.readyState == XMLHttpRequest.DONE &&
-                this.status >=200 &&
-                this.status < 400
-            ) {
-                resolve(JSON.parse(this.responseText));
-                console.log("Connecté");
-            } else {
-            }
-        };
-        request.open("GET", "http://localhost:3000/api/furniture/" + idfurniture);
-        request.send();
+        let savoirPlus = document.createElement('a');
+        savoirPlus.textContent = "Savoir plus"
+        savoirPlus.href = "produit.html?id="+element._id
+        produit1.append(savoirPlus);
     });
-};
+})
 
-async function furniture(){
-    const furniture = await getAllFurniture();
-}*/
-
-
+/*
 let title = document.createElement('h1');
 
 //img
@@ -98,3 +89,4 @@ produit1.append(savoirPlus1);
 produit2.append(savoirPlus2);
 produit3.append(savoirPlus3);
 
+*/
