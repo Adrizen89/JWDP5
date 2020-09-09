@@ -17,7 +17,7 @@ fetch("http://localhost:3000/api/furniture/")
         produitContainer.append(nameProduit);
 
         let prixProduit = document.createElement('p');
-        prixProduit.textContent =  element.price+"€"
+        prixProduit.textContent =  element.price / 1000 +"0€"
         produitContainer.append(prixProduit);
 
 
