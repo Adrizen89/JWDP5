@@ -30,4 +30,33 @@ a {
     font-size: 1.4em;
     color: black; }
 
+select {
+  margin-left: 250px; }
+
+#detailProduit article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center; }
+  #detailProduit article img {
+    width: 20%; }
+  #detailProduit article .content {
+    width: 35%;
+    margin-left: 20px; }
+  #detailProduit article .precision {
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    #detailProduit article .precision h2 {
+      font-size: 1.5em; }
+    #detailProduit article .precision .prix {
+      font-size: 1.4em; }
+    #detailProduit article .precision select {
+      margin: auto; }
+    #detailProduit article .precision .btn_ajoutPanier {
+      width: 40%;
+      margin: auto;
+      background-color: burlywood; }
+
 /*# sourceMappingURL=style.css.map */
