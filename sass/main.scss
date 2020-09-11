@@ -41,3 +41,45 @@ a{
         }
     }
 }
+
+select{
+    margin-left: 250px;
+}
+#detailProduit{
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        img{
+        width: 20%;
+        }
+        .content{
+            width: 35%;
+            margin-left: 20px;
+        }
+        .precision{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            h2{
+                font-size: 1.5em;
+            }
+            .prix{
+                font-size: 1.4em;
+            }
+            select{
+                margin: auto;
+            }
+            .btn_ajoutPanier{
+                width: 40%;
+                margin: auto;
+                background-color: burlywood;
+
+            }
+        }
+
+    }
+    
+}
