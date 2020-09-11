@@ -6,7 +6,7 @@ a{
     text-decoration: none;
 }
 
-#header{background-color: #FFDFB5;
+#header{
     h1{
         text-align: center;
         font-size: 6em;
@@ -18,28 +18,26 @@ a{
 }
 
 #main{
-    section{
-        margin-top: 100px;
-        article{
-            display : flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-top: 50px;
-            background-color: #FFDFB5;
-            .img1, .img2, .img3{
-                width: 15%;
-                box-shadow: 1px 0px 10px #998366;
-            }
-
-            h2{
-                width: 15%;
-            }
-            p{
-                font-size: 1.3em;
-            }
-            a{
-                color: black;
-            }
+    article{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 100px;
+        img{
+            width: 20%;
+        }
+        h2{
+            width: 33%;
+        }
+        p{
+            width: 20%;
+            font-size: 1.5em;
+        }
+        a{
+            font-size: 1.4em;
+            color: black;
         }
     }
 }
