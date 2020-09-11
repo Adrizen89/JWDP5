@@ -1,4 +1,6 @@
-fetch("http://localhost:3000/api/furniture/")
+var maRequete = new Request('http://localhost:3000/api/furniture/');
+
+fetch(maRequete)
 .then(response => response.json())
 .then(response =>{
     console.log(response)
@@ -26,6 +28,7 @@ fetch("http://localhost:3000/api/furniture/")
         produitContainer.append(savoirPlus);
     });
 });
+
 
 /*let idFurniture = "";
 async function detailFurniture() {
