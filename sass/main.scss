@@ -1,6 +1,9 @@
+$color-bg : #FFDFB0;
+
 *{
     margin: 0;
     font-family: 'Finger Paint';
+    background-color: $color-bg ;
 }
 a{
     text-decoration: none;
@@ -18,6 +21,10 @@ a{
 }
 
 #main{
+    background-color: #D8C09D;
+    margin: 50px;
+    padding: 1px;
+    box-shadow: 0 1px 5px #7A6C57;
     article{
         width: 80%;
         display: flex;
@@ -25,8 +32,11 @@ a{
         align-items: center;
         text-align: center;
         margin: 100px;
+        
         img{
             width: 20%;
+            box-shadow: 0 1px 5px #7A6C57;
+            margin-right: 10px;
         }
         h2{
             width: 33%;
@@ -36,8 +46,10 @@ a{
             font-size: 1.5em;
         }
         a{
-            font-size: 1.4em;
+            font-size: 1.5em;
             color: black;
+            width: 30%;
+            margin-right: 10px;
         }
     }
 }
@@ -82,4 +94,9 @@ select{
 
     }
     
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 20px;
 }
