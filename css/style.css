@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  font-family: 'Finger Paint'; }
+  font-family: 'Finger Paint';
+  background-color: #FFDFB0; }
 
 a {
   text-decoration: none; }
@@ -12,23 +13,32 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-#main article {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 100px; }
-  #main article img {
-    width: 20%; }
-  #main article h2 {
-    width: 33%; }
-  #main article p {
-    width: 20%;
-    font-size: 1.5em; }
-  #main article a {
-    font-size: 1.4em;
-    color: black; }
+#main {
+  background-color: #D8C09D;
+  margin: 50px;
+  padding: 1px;
+  box-shadow: 0 1px 5px #7A6C57; }
+  #main article {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px; }
+    #main article img {
+      width: 20%;
+      box-shadow: 0 1px 5px #7A6C57;
+      margin-right: 10px; }
+    #main article h2 {
+      width: 33%; }
+    #main article p {
+      width: 20%;
+      font-size: 1.5em; }
+    #main article a {
+      font-size: 1.5em;
+      color: black;
+      width: 30%;
+      margin-right: 10px; }
 
 select {
   margin-left: 250px; }
@@ -58,5 +68,9 @@ select {
       width: 40%;
       margin: auto;
       background-color: burlywood; }
+
+footer {
+  text-align: center;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */
