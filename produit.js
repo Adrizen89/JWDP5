@@ -51,6 +51,7 @@ fetch(maRequete)
                 btnAjoutPanier.textContent = "Ajouter au panier !";
                 btnAjoutPanier.setAttribute("type", "submit");
                 btnAjoutPanier.setAttribute("class", "btn_ajoutPanier");
+                btnAjoutPanier.setAttribute("href", "panier.html");
                 divPrecision.append(btnAjoutPanier);
    
         
