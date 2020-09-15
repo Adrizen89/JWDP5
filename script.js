@@ -24,7 +24,7 @@ fetch(maRequete)
 
         let savoirPlus = document.createElement('a');
         savoirPlus.textContent = "En savoir plus "
-        savoirPlus.href = "produit.html?id"+element._id
+        savoirPlus.href = "produit.html?id="+element._id
         produitContainer.append(savoirPlus);
     });
 });
