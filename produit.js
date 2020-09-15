@@ -1,10 +1,15 @@
-var maRequete = new Request('http://localhost:3000/api/furniture/');
+const param = window.location.search
+const params = new URLSearchParams(param)
+const id = params.get("id")
+console.log(id);
+
+var maRequete = new Request('http://localhost:3000/api/furniture/' +id);
 
 fetch(maRequete)
 .then(response => response.json())
 .then(response =>{
     console.log(response)
-    response.forEach(element => {
+    
 
         let detailProduit = document.getElementById('detailProduit');
 
@@ -12,11 +17,11 @@ fetch(maRequete)
                 detailProduit.append(container);
 
                 let img = document.createElement('img');
-                img.src = element.imageUrl;
+                img.src = response.imageUrl;
                 container.append(img);
 
                 let contentDescription = document.createElement('p');
-                contentDescription.textContent = element.description;
+                contentDescription.textContent = response.description;
                 contentDescription.setAttribute("class", "content");
                 container.append(contentDescription);
 
@@ -25,11 +30,19 @@ fetch(maRequete)
                 container.append(divPrecision);
 
                 let titleProduit = document.createElement('h2');
-                titleProduit.textContent = element.name;
+                titleProduit.textContent = response.name;
                 divPrecision.append(titleProduit);
 
+                let select = document.createElement('select');
+                response.varnish.forEach(element => {
+                        const option = document.createElement('option');
+                        option.textContent = element;
+                        select.append(option);
+                });
+                divPrecision.append(select);
+
                 let prixProduit = document.createElement('p');
-                prixProduit.textContent = element.price / 1000 + "0€" ;
+                prixProduit.textContent = response.price / 1000 + "0€" ;
                 prixProduit.setAttribute("class", "prix");
                 divPrecision.append(prixProduit);
 
@@ -39,7 +52,6 @@ fetch(maRequete)
                 btnAjoutPanier.setAttribute("type", "submit");
                 btnAjoutPanier.setAttribute("class", "btn_ajoutPanier");
                 divPrecision.append(btnAjoutPanier);
-
-                
-        });
+   
+        
 });
