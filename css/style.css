@@ -4,14 +4,27 @@
   background-color: #FFDFB0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
 
-#header h1 {
-  text-align: center;
-  font-size: 6em;
-  background: -webkit-linear-gradient(10deg, #F39C12, #a35ec0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+li {
+  list-style: none; }
+
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%; }
+  #header h1 {
+    text-align: center;
+    font-size: 6em;
+    background: -webkit-linear-gradient(10deg, #F39C12, #a35ec0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  #header ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%; }
 
 #main {
   background-color: #D8C09D;
@@ -48,9 +61,14 @@ select {
   justify-content: center;
   align-items: center;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  margin: 200px 0 0 0;
+  padding: 50px 0 50px 0;
+  border-top: 3px solid #b19468;
+  border-bottom: 3px solid #b19468; }
   #detailProduit article img {
-    width: 20%; }
+    width: 20%;
+    box-shadow: 0 1px 20px burlywood; }
   #detailProduit article .content {
     width: 35%;
     margin-left: 20px; }
@@ -59,14 +77,23 @@ select {
     flex-direction: column;
     width: 30%; }
     #detailProduit article .precision h2 {
-      font-size: 1.5em; }
+      font-size: 1.7em;
+      margin-bottom: 30px; }
     #detailProduit article .precision .prix {
-      font-size: 1.4em; }
+      font-size: 1.4em;
+      margin: 20px 0 20px 0; }
     #detailProduit article .precision select {
-      margin: auto; }
+      margin: auto;
+      width: 40%;
+      height: 40px;
+      border-radius: 20px;
+      text-align: center;
+      background-color: burlywood; }
     #detailProduit article .precision .btn_ajoutPanier {
       width: 40%;
+      height: 50px;
       margin: auto;
+      border-radius: 20px;
       background-color: burlywood; }
 
 footer {
