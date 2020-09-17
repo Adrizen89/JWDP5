@@ -50,9 +50,17 @@ fetch(maRequete)
                 let btnAjoutPanier = document.createElement('button');
                 btnAjoutPanier.textContent = "Ajouter au panier !";
                 btnAjoutPanier.setAttribute("type", "submit");
-                btnAjoutPanier.setAttribute("class", "btn_ajoutPanier");
-                btnAjoutPanier.setAttribute("href", "panier.html");
+                btnAjoutPanier.setAttribute("id", "btn_ajoutPanier");
                 divPrecision.append(btnAjoutPanier);
-   
-        
+
+                let node = document.getElementById("chiffre");
+                let cpt = 0;
+
+                btnAjoutPanier.addEventListener("click", (event) => {
+                node.innerHTML = ++cpt;
+                });
+
+                
+                
+                
 });
