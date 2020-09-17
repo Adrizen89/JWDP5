@@ -89,7 +89,7 @@ select {
       border-radius: 20px;
       text-align: center;
       background-color: burlywood; }
-    #detailProduit article .precision .btn_ajoutPanier {
+    #detailProduit article .precision #btn_ajoutPanier {
       width: 40%;
       height: 50px;
       margin: auto;
