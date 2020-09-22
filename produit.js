@@ -1,3 +1,11 @@
+const node = document.getElementById("chiffre");
+if(localStorage.getItem("cpt")){
+    node.textContent = localStorage.getItem("cpt");
+}
+else{
+    node.textContent = 0;
+}
+
 const param = window.location.search
 const params = new URLSearchParams(param)
 const id = params.get("id")
@@ -53,11 +61,30 @@ fetch(maRequete)
                 btnAjoutPanier.setAttribute("id", "btn_ajoutPanier");
                 divPrecision.append(btnAjoutPanier);
 
-                let node = document.getElementById("chiffre");
-                let cpt = 0;
+                const node = document.getElementById("chiffre");
 
                 btnAjoutPanier.addEventListener("click", (event) => {
-                node.innerHTML = ++cpt;
+                        const panier = JSON.parse(localStorage.getItem("panier")) 
+                        if(panier){
+                                panier.push(response)
+                                localStorage.setItem("panier", JSON.stringify(panier))
+                        }
+                        else{
+                                const newPanier = []
+                                newPanier.push(response)
+                                localStorage.setItem("panier", JSON.stringify(newPanier))
+                        }
+                        const cpt =  parseInt(localStorage.getItem("cpt")) 
+                        if(cpt){
+                                const compteur = cpt +1;
+                                localStorage.setItem("cpt", compteur )
+                                node.textContent = compteur;
+                        }
+                        else{
+                                localStorage.setItem("cpt", 1)
+                                node.textContent = 1;    
+                        }
+                        
                 });
 
                 
