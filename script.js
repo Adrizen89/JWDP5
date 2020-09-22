@@ -1,4 +1,12 @@
-var maRequete = new Request('http://localhost:3000/api/furniture/');
+const node = document.getElementById("chiffre");
+if(localStorage.getItem("cpt")){
+    node.textContent = localStorage.getItem("cpt");
+}
+else{
+    node.textContent = 0;
+}
+
+const maRequete = new Request('http://localhost:3000/api/furniture/');
 
 fetch(maRequete)
 .then(response => response.json())
@@ -30,20 +38,6 @@ fetch(maRequete)
 });
 
 
-/*let idFurniture = "";
-async function detailFurniture() {
-    idFurniture = location.search;
-    const detailFurniture = await element();
-
-    let detailProduit = document.getElementById('detailProduit');
-
-    let articleContainer = document.createElement('article');
-    detailProduit.append(articleContainer);
-
-    let imgTrue = document.createElement('img');
-    imgTrue.src = detailFurniture.imageUrl;
-    articleContainer.append(imgTrue);
-}*/
 
 
 
