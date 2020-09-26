@@ -61,8 +61,11 @@ fetch(maRequete)
                 btnAjoutPanier.setAttribute("id", "btn_ajoutPanier");
                 divPrecision.append(btnAjoutPanier);
 
-                const node = document.getElementById("chiffre");
 
+                //bouton ajouter panier
+                
+                const node = document.getElementById("chiffre");
+                
                 btnAjoutPanier.addEventListener("click", (event) => {
                         const panier = JSON.parse(localStorage.getItem("panier")) 
                         if(panier){
