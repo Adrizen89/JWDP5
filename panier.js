@@ -115,6 +115,7 @@ const panier = JSON.parse(localStorage.getItem("panier"))
     btnSubmit.setAttribute("type", "submit");
     btnSubmit.setAttribute("value", "Commander !");
     btnSubmit.setAttribute("id", "btnSubmit");
+    btnSubmit.setAttribute("href", "confirmation.html");
     formulaire.append(btnSubmit);
 
 
@@ -123,8 +124,17 @@ const panier = JSON.parse(localStorage.getItem("panier"))
         function sendData() {
             const contact = {};
             const lastName = document.getElementById("name").value;
+            const firstName = document.getElementById("firstName").value;
+            const address = document.getElementById("adress").value;
+            const city = document.getElementById("town").value;
+            const email = document.getElementById("mail").value;
             
             contact.lastName = lastName;
+            contact.firstName = firstName;
+            contact.address = address;
+            contact.city = city;
+            contact.email = email;
+
             fetch("http://localhost:3000/api/furniture/order", {method: 'POST',headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -143,6 +153,7 @@ const panier = JSON.parse(localStorage.getItem("panier"))
           event.preventDefault();
       
           sendData();
+          onclick=document.location.href="confirmation.html";
         });
       });
 
