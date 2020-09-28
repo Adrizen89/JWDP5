@@ -43,9 +43,9 @@ fetch(maRequete)
 
                 let select = document.createElement('select');
                 response.varnish.forEach(element => {
-                        const option = document.createElement('option');
-                        option.textContent = element;
-                        select.append(option);
+                const option = document.createElement('option');
+                option.textContent = element;
+                select.append(option);
                 });
                 divPrecision.append(select);
 
