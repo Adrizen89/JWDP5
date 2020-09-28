@@ -15,17 +15,7 @@ fetch(maRequete)
     
 
     const panier = JSON.parse(localStorage.getItem("panier")) 
-    if(panier){
-            response.forEach(element => {
-            let main = document.getElementById("main-panier");
-            let img = document.createElement('img');
-            img.src = response.imageUrl;
-            main.append(img);
-            });
-    }
-    else{
-            alert("votre panier est vide !")
-    }
+    console.log("panier");
 
 
         
