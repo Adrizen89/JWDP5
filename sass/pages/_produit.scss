@@ -1,0 +1,53 @@
+#detailProduit{
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin: 200px 0 0 0 ;
+        padding: 50px 0 50px 0;
+        border-top: 3px solid $border;
+        border-bottom: 3px solid $border;
+        
+        img{
+        width: 20%;
+        box-shadow: 0 1px 20px $shadow-img;
+        }
+        .content{
+            width: 35%;
+            margin-left: 20px;
+        }
+        .precision{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            h2{
+                font-size: 1.7em;
+                margin-bottom: 30px;
+            }
+            .prix{
+                font-size: 1.4em;
+                margin: 20px 0 20px 0;
+            }
+            select{
+                margin: auto;
+                width: 40%;
+                height: 40px;
+                border-radius: 20px;
+                text-align: center;
+                background-color: $bg-btn;
+            }
+            #btn_ajoutPanier{
+                width: 40%;
+                height: 50px;
+                margin: auto;
+                border-radius: 20px;
+                background-color: $bg-btn;
+
+            }
+        }
+
+    }
+    
+}
