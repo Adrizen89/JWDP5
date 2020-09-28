@@ -6,17 +6,148 @@ else{
     node.textContent = 0;
 }
 
-var maRequete = new Request('http://localhost:3000/api/furniture/');
-
-fetch(maRequete)
-.then(response => response.json())
-.then(response =>{
-    console.log(response)
+const panier = JSON.parse(localStorage.getItem("panier")) 
     
+    let main = document.getElementById('main-panier');
+    const produit = [];
+    panier.forEach(element => {
 
-    const panier = JSON.parse(localStorage.getItem("panier")) 
-    console.log("panier");
+        produit.push(element._id);
+
+    let container = document.createElement('article');
+    main.append(container);
+
+    let img = document.createElement('img');
+    img.src = element.imageUrl;
+    container.append(img);
+
+    let nameProduit = document.createElement('h2');
+    nameProduit.textContent = element.name 
+    container.append(nameProduit);
+
+    let prixProduit = document.createElement('p');
+    prixProduit.textContent = element.price / 1000 +"0€"
+    container.append(prixProduit);
+
+    });
+
+
+    let divName = document.createElement("div");
+    let divFirstName = document.createElement("div");
+    let divMail = document.createElement("div");
+    let divAdresse = document.createElement("div");
+    let divVille = document.createElement("div");
+
+    let formulaire = document.createElement('form');
+    formulaire.setAttribute("id", "myForm");
+    formulaire.setAttribute("method", "post");
+    main.append(formulaire);
+
+    formulaire.append(divName);
+
+    let myName = document.createElement('label');
+    myName.textContent = "Votre Nom :";
+    myName.setAttribute("for", "name");
+    let name = document.createElement('input');
+    name.setAttribute("id", "name");
+    name.setAttribute("name", "user_name");
+    name.setAttribute("placeholder", "Berard");
+    name.setAttribute("required", "required");
+    divName.append(myName);
+    divName.append(name);
+
+    formulaire.append(divFirstName);
+
+    let myFirstName = document.createElement('label');
+    myFirstName.textContent = "Votre Prénom :";
+    myFirstName.setAttribute("for", "firstName");
+    let firstName = document.createElement('input');
+    firstName.setAttribute("id", "firstName");
+    firstName.setAttribute("name", "user_firstName");
+    firstName.setAttribute("placeholder", "Adrien");
+    firstName.setAttribute("required", "required");
+    divFirstName.append(myFirstName);
+    divFirstName.append(firstName);
+
+    formulaire.append(divMail);
+
+    let myMail = document.createElement('label');
+    myMail.textContent = "Votre adresse Mail :";
+    myMail.setAttribute("for", "mail");
+    let mail = document.createElement('input');
+    mail.setAttribute("id", "mail");
+    mail.setAttribute("name", "user_mail");
+    mail.setAttribute("type", "email");
+    mail.setAttribute("placeholder", "adrien@hotmail.fr");
+    mail.setAttribute("required", "required");
+    divMail.append(myMail);
+    divMail.append(mail);
+
+    formulaire.append(divAdresse);
+    
+    let myAdress = document.createElement('label');
+    myAdress.textContent = "Votre Adresse :";
+    myAdress.setAttribute("for", "adress");
+    let adress = document.createElement('input');
+    adress.setAttribute("id", "adress");
+    adress.setAttribute("name", "user_adress");
+    adress.setAttribute("placeholder", "2 rue du théâtre");
+    adress.setAttribute("required", "required");
+    divAdresse.append(myAdress);
+    divAdresse.append(adress);
+
+    formulaire.append(divVille);
+
+    let myTown = document.createElement('label');
+    myTown.textContent = "Votre Ville :";
+    myTown.setAttribute("for", "town");
+    let town = document.createElement('input');
+    town.setAttribute("id", "town");
+    town.setAttribute("name", "user_town");
+    town.setAttribute("placeholder", "Auxerre");
+    town.setAttribute("required", "required");
+    divVille.append(myTown);
+    divVille.append(town);
+
+
+    
+    let btnSubmit = document.createElement('input');
+    btnSubmit.setAttribute("type", "submit");
+    btnSubmit.setAttribute("value", "Commander !");
+    btnSubmit.setAttribute("id", "btnSubmit");
+    formulaire.append(btnSubmit);
+
+
+
+    window.addEventListener("load", function () {
+        function sendData() {
+            const contact = {};
+            const lastName = document.getElementById("name").value;
+            
+            contact.lastName = lastName;
+            fetch("http://localhost:3000/api/furniture/order", {method: 'POST',headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({contact: contact, products: produit})
+            })
+            .then(response => response.json())
+            .then(response =>{
+                console.log(response);
+            })
+          
+        }
+        var form = document.getElementById("myForm");
+      
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+      
+          sendData();
+        });
+      });
+
+    
 
 
         
-});          
+         
