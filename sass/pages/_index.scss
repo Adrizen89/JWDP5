@@ -1,0 +1,35 @@
+
+
+#main{
+    background-color: $bg-main;
+    margin: 50px;
+    padding: 1px;
+    box-shadow: 0 1px 5px $shadow-main;
+    article{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 100px;
+        
+        img{
+            width: 20%;
+            box-shadow: 0 1px 5px #7A6C57;
+            margin-right: 10px;
+        }
+        h2{
+            width: 33%;
+        }
+        p{
+            width: 20%;
+            font-size: 1.5em;
+        }
+        a{
+            font-size: 1.5em;
+            color: black;
+            width: 30%;
+            margin-right: 10px;
+        }
+    }
+}
