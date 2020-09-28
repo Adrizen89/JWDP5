@@ -1,4 +1,7 @@
-$color-bg : #FFDFB0;
+@import "./variables/colors";
+@import "./pages/index";
+@import "./pages/produit";
+@import "./pages/panier";
 
 *{
     margin: 0;
@@ -21,7 +24,7 @@ li{
     h1{
         text-align: center;
         font-size: 6em;
-        background: -webkit-linear-gradient(10deg, #F39C12,  #a35ec0);
+        background: -webkit-linear-gradient(10deg, $orange-deg, $violet-deg);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         
@@ -33,99 +36,11 @@ li{
     }
 }
 
-#main{
-    background-color: #D8C09D;
-    margin: 50px;
-    padding: 1px;
-    box-shadow: 0 1px 5px #7A6C57;
-    article{
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 100px;
-        
-        img{
-            width: 20%;
-            box-shadow: 0 1px 5px #7A6C57;
-            margin-right: 10px;
-        }
-        h2{
-            width: 33%;
-        }
-        p{
-            width: 20%;
-            font-size: 1.5em;
-        }
-        a{
-            font-size: 1.5em;
-            color: black;
-            width: 30%;
-            margin-right: 10px;
-        }
-    }
-}
-
-select{
-    margin-left: 250px;
-}
-#detailProduit{
-    article{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        text-align: center;
-        margin: 200px 0 0 0 ;
-        padding: 50px 0 50px 0;
-        border-top: 3px solid #b19468;
-        border-bottom: 3px solid #b19468;
-        
-        img{
-        width: 20%;
-        box-shadow: 0 1px 20px burlywood;
-        }
-        .content{
-            width: 35%;
-            margin-left: 20px;
-        }
-        .precision{
-            display: flex;
-            flex-direction: column;
-            width: 30%;
-            h2{
-                font-size: 1.7em;
-                margin-bottom: 30px;
-            }
-            .prix{
-                font-size: 1.4em;
-                margin: 20px 0 20px 0;
-            }
-            select{
-                margin: auto;
-                width: 40%;
-                height: 40px;
-                border-radius: 20px;
-                text-align: center;
-                background-color: burlywood;
-            }
-            #btn_ajoutPanier{
-                width: 40%;
-                height: 50px;
-                margin: auto;
-                border-radius: 20px;
-                background-color: burlywood;
-
-            }
-        }
-
-    }
-    
-}
-
 footer{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
 }
+
+
+
