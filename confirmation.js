@@ -1,4 +1,4 @@
-const { response } = require("express");
+
 
 const node = document.getElementById("chiffre");
 if(localStorage.getItem("cpt")){
@@ -8,14 +8,23 @@ else{
     node.textContent = 0;
 }
 
-response.forEach(element => {
+fetch("http://localhost:3000/api/furniture")
+            .then(response => response.json())
+            .then(response =>{
+                console.log(response);
 
-    let main = document.getElementById('main-confirmation');
+                response.forEach(element => {
 
-    let container = document.createElement('article');
-    main.append(container);
+                    const orderId = JSON.parse(localStorage.getItem("orderId"));
 
-    let id = document.createElement('img');
-    id.textContent = element.order_id;
-    container.append(id);
-});
+                    let main = document.getElementById('main-confirmation');
+                    let container = document.createElement('article');
+                    main.append(container);
+
+                    let id = document.createElement('p');
+                    id.textContent = response._id;
+                    container.append(id);
+                });
+
+            });
+
