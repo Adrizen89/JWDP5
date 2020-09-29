@@ -12,7 +12,7 @@ const panier = JSON.parse(localStorage.getItem("panier"))
     const produit = [];
     panier.forEach(element => {
 
-        produit.push(element._id);
+    produit.push(element._id);
 
     let container = document.createElement('article');
     main.append(container);
@@ -144,6 +144,7 @@ const panier = JSON.parse(localStorage.getItem("panier"))
             .then(response => response.json())
             .then(response =>{
                 console.log(response);
+                const orderId = JSON.parse(localStorage.setItem("orderId"));
             })
           
         }
