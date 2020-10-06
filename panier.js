@@ -10,8 +10,11 @@ const panier = JSON.parse(localStorage.getItem("panier"))
     
     let main = document.getElementById('main-panier');
     const produit = [];
-    panier.forEach(element => {
+    let total = 0;
 
+    panier.forEach(element => {
+    
+    total += element.price;
     produit.push(element._id);
 
     let container = document.createElement('article');
@@ -144,7 +147,9 @@ const panier = JSON.parse(localStorage.getItem("panier"))
             .then(response => response.json())
             .then(response =>{
                 console.log(response);
-                const orderId = JSON.parse(localStorage.setItem("orderId"));
+                localStorage.setItem("orderId", response.orderId);
+                localStorage.setItem("total", total);
+                document.location.href="confirmation.html?orderId="+response.orderId;
             })
           
         }
@@ -154,7 +159,7 @@ const panier = JSON.parse(localStorage.getItem("panier"))
           event.preventDefault();
       
           sendData();
-          onclick=document.location.href="confirmation.html";
+          
         });
       });
 
