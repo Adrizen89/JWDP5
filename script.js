@@ -12,6 +12,11 @@ fetch(maRequete)
 .then(response => response.json())
 .then(response =>{
     console.log(response)
+    afficherMeubles(response);
+});
+
+
+function afficherMeubles(response){
     response.forEach(element => {
         let main = document.getElementById('main');
 
@@ -35,9 +40,6 @@ fetch(maRequete)
         savoirPlus.href = "produit.html?id="+element._id
         produitContainer.append(savoirPlus);
     });
-});
-
-
-
+}
 
 
