@@ -10,20 +10,51 @@
     align-items: center;
     text-align: center;
     margin: 100px; }
+    @media screen and (max-width: 960px) {
+      #main article {
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+        margin-top: 30px; } }
     #main article img {
       width: 20%;
       box-shadow: 0 1px 5px #7A6C57;
       margin-right: 10px; }
+      @media screen and (max-width: 960px) {
+        #main article img {
+          width: 30%; } }
+      @media screen and (max-width: 425px) {
+        #main article img {
+          width: 50%; } }
     #main article h2 {
       width: 33%; }
+      @media screen and (max-width: 960px) {
+        #main article h2 {
+          font-size: 1.2em; } }
+      @media screen and (max-width: 675px) {
+        #main article h2 {
+          font-size: 0.8em; } }
     #main article p {
       width: 20%;
       font-size: 1.5em; }
+      @media screen and (max-width: 960px) {
+        #main article p {
+          font-size: 1.2em; } }
+      @media screen and (max-width: 675px) {
+        #main article p {
+          font-size: 0.8em; } }
     #main article a {
       font-size: 1.5em;
       color: black;
       width: 30%;
       margin-right: 10px; }
+      @media screen and (max-width: 960px) {
+        #main article a {
+          font-size: 1em; } }
+      @media screen and (max-width: 675px) {
+        #main article a {
+          width: 50%;
+          font-size: 0.9em; } }
 
 #detailProduit article {
   display: flex;
@@ -138,10 +169,19 @@ li {
     background: -webkit-linear-gradient(10deg, #F39C12, #a35ec0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+    @media screen and (max-width: 675px) {
+      #header h1 {
+        font-size: 3.5em; } }
+    @media screen and (max-width: 425px) {
+      #header h1 {
+        font-size: 2em; } }
   #header ul {
     display: flex;
     justify-content: space-evenly;
     width: 100%; }
+    @media screen and (max-width: 675px) {
+      #header ul li a {
+        font-size: 0.8em; } }
 
 footer {
   text-align: center;
