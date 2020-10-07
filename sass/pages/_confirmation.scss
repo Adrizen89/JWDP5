@@ -1,0 +1,27 @@
+#main-confirmation{
+    #article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        .identifiant, .prixTotal{
+            display: flex;
+            margin-top: 50px;
+        }
+        .id, .prix{
+            font-size: 1.5em;
+            margin-left: 10px;
+        }
+        .merci{
+            margin-top: 50px;
+            font-size: 1.4em;
+        }
+    }
+}
+#footer-confirmation{
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
