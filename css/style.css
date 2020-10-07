@@ -69,9 +69,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  border-top: solid 2px #b19468;
+  border-bottom: solid 2px #b19468;
+  margin: 30px 0 30px 0; }
   #main-panier article img {
-    width: 25%; }
+    width: 25%;
+    box-shadow: 0 1px 20px burlywood; }
   #main-panier article h2 {
     font-size: 1.4em;
     width: 35%; }
@@ -88,6 +92,28 @@
     width: 30%; }
 #main-panier #myForm #btnSubmit {
   margin-left: 30px; }
+
+#main-confirmation #article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; }
+  #main-confirmation #article .identifiant, #main-confirmation #article .prixTotal {
+    display: flex;
+    margin-top: 50px; }
+  #main-confirmation #article .id, #main-confirmation #article .prix {
+    font-size: 1.5em;
+    margin-left: 10px; }
+  #main-confirmation #article .merci {
+    margin-top: 50px;
+    font-size: 1.4em; }
+
+#footer-confirmation {
+  position: absolute;
+  bottom: 0;
+  left: 45%; }
 
 * {
   margin: 0;
