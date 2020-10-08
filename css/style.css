@@ -1,8 +1,11 @@
 #main {
   background-color: #D8C09D;
   margin: 50px;
-  padding: 1px;
+  padding: 10px;
   box-shadow: 0 1px 5px #7A6C57; }
+  @media screen and (max-width: 430px) {
+    #main {
+      margin: 10px; } }
   #main article {
     width: 80%;
     display: flex;
@@ -23,9 +26,14 @@
       @media screen and (max-width: 960px) {
         #main article img {
           width: 30%; } }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 675px) {
         #main article img {
-          width: 50%; } }
+          width: 40%;
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 430px) {
+        #main article img {
+          width: 50%;
+          margin-bottom: 10px; } }
     #main article h2 {
       width: 33%; }
       @media screen and (max-width: 960px) {
@@ -55,6 +63,9 @@
         #main article a {
           width: 50%;
           font-size: 0.9em; } }
+      @media screen and (max-width: 430px) {
+        #main article a {
+          font-size: 0.8em; } }
 
 #detailProduit article {
   display: flex;
@@ -66,12 +77,32 @@
   padding: 50px 0 50px 0;
   border-top: 3px solid #b19468;
   border-bottom: 3px solid #b19468; }
+  @media screen and (max-width: 960px) {
+    #detailProduit article {
+      margin: 30px 0 0 0; } }
+  @media screen and (max-width: 675px) {
+    #detailProduit article {
+      flex-direction: column;
+      margin: 0; } }
   #detailProduit article img {
     width: 20%;
     box-shadow: 0 1px 20px burlywood; }
+    @media screen and (max-width: 675px) {
+      #detailProduit article img {
+        width: 35%; } }
+    @media screen and (max-width: 430px) {
+      #detailProduit article img {
+        width: 50%; } }
   #detailProduit article .content {
     width: 35%;
     margin-left: 20px; }
+    @media screen and (max-width: 675px) {
+      #detailProduit article .content {
+        width: 60%;
+        margin-top: 30px; } }
+    @media screen and (max-width: 430px) {
+      #detailProduit article .content {
+        font-size: 0.8em; } }
   #detailProduit article .precision {
     display: flex;
     flex-direction: column;
@@ -79,6 +110,13 @@
     #detailProduit article .precision h2 {
       font-size: 1.7em;
       margin-bottom: 30px; }
+      @media screen and (max-width: 675px) {
+        #detailProduit article .precision h2 {
+          margin-top: 10px;
+          font-size: 1.3em; } }
+      @media screen and (max-width: 430px) {
+        #detailProduit article .precision h2 {
+          font-size: 1em; } }
     #detailProduit article .precision .prix {
       font-size: 1.4em;
       margin: 20px 0 20px 0; }
@@ -89,12 +127,21 @@
       border-radius: 20px;
       text-align: center;
       background-color: burlywood; }
+      @media screen and (max-width: 675px) {
+        #detailProduit article .precision select {
+          width: 100%; } }
     #detailProduit article .precision #btn_ajoutPanier {
       width: 40%;
       height: 50px;
       margin: auto;
       border-radius: 20px;
       background-color: burlywood; }
+      @media screen and (max-width: 795px) {
+        #detailProduit article .precision #btn_ajoutPanier {
+          width: 50%; } }
+      @media screen and (max-width: 675px) {
+        #detailProduit article .precision #btn_ajoutPanier {
+          width: 100%; } }
 
 #main-panier article {
   display: flex;
@@ -119,7 +166,11 @@
   #main-panier #myForm div label {
     width: 25%;
     text-align: left; }
-  #main-panier #myForm div #mail, #main-panier #myForm div #adress {
+    @media screen and (max-width: 795px) {
+      #main-panier #myForm div label {
+        font-size: 0.8em; } }
+  #main-panier #myForm div #mail,
+  #main-panier #myForm div #adress {
     width: 30%; }
 #main-panier #myForm #btnSubmit {
   margin-left: 30px; }
@@ -131,10 +182,16 @@
   align-items: center;
   text-align: center;
   width: 100%; }
-  #main-confirmation #article .identifiant, #main-confirmation #article .prixTotal {
+  #main-confirmation #article .identifiant,
+  #main-confirmation #article .prixTotal {
     display: flex;
     margin-top: 50px; }
-  #main-confirmation #article .id, #main-confirmation #article .prix {
+    @media screen and (max-width: 960px) {
+      #main-confirmation #article .identifiant,
+      #main-confirmation #article .prixTotal {
+        flex-direction: column; } }
+  #main-confirmation #article .id,
+  #main-confirmation #article .prix {
     font-size: 1.5em;
     margin-left: 10px; }
   #main-confirmation #article .merci {
@@ -145,6 +202,10 @@
   position: absolute;
   bottom: 0;
   left: 45%; }
+  @media screen and (max-width: 960px) {
+    #footer-confirmation {
+      position: relative;
+      left: 0; } }
 
 * {
   margin: 0;
@@ -172,7 +233,7 @@ li {
     @media screen and (max-width: 675px) {
       #header h1 {
         font-size: 3.5em; } }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 430px) {
       #header h1 {
         font-size: 2em; } }
   #header ul {
