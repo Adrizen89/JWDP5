@@ -1,25 +1,26 @@
+//Chiffre du Panier 
 const node = document.getElementById("chiffre");
-if(localStorage.getItem("cpt")){
-    node.textContent = localStorage.getItem("cpt");
+if (localStorage.getItem("cpt")) {
+        node.textContent = localStorage.getItem("cpt");
 }
-else{
-    node.textContent = 0;
+else {
+        node.textContent = 0;
 }
-
+//récupérer l'Id dans l'URL
 const param = window.location.search
 const params = new URLSearchParams(param)
 const id = params.get("id")
 console.log(id);
 
-var maRequete = new Request('http://localhost:3000/api/furniture/' +id);
+var maRequete = new Request('http://localhost:3000/api/furniture/' + id);
 
 fetch(maRequete)
-.then(response => response.json())
-.then(response =>{
-    console.log(response)
-    
+        .then(response => response.json())
+        .then(response => {
+                console.log(response)
 
-        let detailProduit = document.getElementById('detailProduit');
+                //affichage du produit
+                let detailProduit = document.getElementById('detailProduit');
 
                 let container = document.createElement('article');
                 detailProduit.append(container);
@@ -43,14 +44,14 @@ fetch(maRequete)
 
                 let select = document.createElement('select');
                 response.varnish.forEach(element => {
-                const option = document.createElement('option');
-                option.textContent = element;
-                select.append(option);
+                        const option = document.createElement('option');
+                        option.textContent = element;
+                        select.append(option);
                 });
                 divPrecision.append(select);
 
                 let prixProduit = document.createElement('p');
-                prixProduit.textContent = response.price / 1000 + "0€" ;
+                prixProduit.textContent = response.price / 1000 + "0€";
                 prixProduit.setAttribute("class", "prix");
                 divPrecision.append(prixProduit);
 
@@ -63,34 +64,34 @@ fetch(maRequete)
 
 
                 //bouton ajouter panier
-                
+
                 const node = document.getElementById("chiffre");
-                
+
                 btnAjoutPanier.addEventListener("click", (event) => {
-                        const panier = JSON.parse(localStorage.getItem("panier")) 
-                        if(panier){
+                        const panier = JSON.parse(localStorage.getItem("panier"))
+                        if (panier) {
                                 panier.push(response)
                                 localStorage.setItem("panier", JSON.stringify(panier))
                         }
-                        else{
+                        else {
                                 const newPanier = []
                                 newPanier.push(response)
                                 localStorage.setItem("panier", JSON.stringify(newPanier))
                         }
-                        const cpt =  parseInt(localStorage.getItem("cpt")) 
-                        if(cpt){
-                                const compteur = cpt +1;
-                                localStorage.setItem("cpt", compteur )
+                        const cpt = parseInt(localStorage.getItem("cpt"))
+                        if (cpt) {
+                                const compteur = cpt + 1;
+                                localStorage.setItem("cpt", compteur)
                                 node.textContent = compteur;
                         }
-                        else{
+                        else {
                                 localStorage.setItem("cpt", 1)
-                                node.textContent = 1;    
+                                node.textContent = 1;
                         }
-                        
+
                 });
 
-                
-                
-                
-});
+
+
+
+        });
