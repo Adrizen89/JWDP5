@@ -1,27 +1,42 @@
-#main-confirmation{
-    #article{
+#main-confirmation {
+    #article {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 100%;
-        .identifiant, .prixTotal{
+
+        .identifiant,
+        .prixTotal {
             display: flex;
             margin-top: 50px;
+
+            @include tablet() {
+                flex-direction: column;
+            }
         }
-        .id, .prix{
+
+        .id,
+        .prix {
             font-size: 1.5em;
             margin-left: 10px;
         }
-        .merci{
+
+        .merci {
             margin-top: 50px;
             font-size: 1.4em;
         }
     }
 }
-#footer-confirmation{
+
+#footer-confirmation {
     position: absolute;
     bottom: 0;
     left: 45%;
+
+    @include tablet() {
+        position: relative;
+        left: 0;
+    }
 }
