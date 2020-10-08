@@ -2,17 +2,41 @@
     @media screen and (max-width : 960px) {
         @content;
     }
-};
+}
+
+;
+
+@mixin produit-middle {
+    @media screen and (max-width : 795px) {
+        @content
+    }
+}
+
+;
+
 @mixin mobile {
-    @media screen  and (max-width : 675px){
+    @media screen and (max-width : 675px) {
         @content;
     }
-};
+}
+
+;
+
 @mixin small-mobile {
-    @media screen and (max-width:425px) {
+    @media screen and (max-width:430px) {
         @content;
     }
-};
+}
+
+;
+
+@mixin very-small {
+    @media screen and (max-width: 385px) {
+        @content;
+    }
+}
+
+;
 
 
 @import "./variables/colors";
@@ -21,45 +45,52 @@
 @import "./pages/panier";
 @import "./pages/confirmation";
 
-*{
+* {
     margin: 0;
     font-family: 'Finger Paint';
-    background-color: $color-bg ;
+    background-color: $color-bg;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
-li{
+
+li {
     list-style: none;
 }
 
-#header{
+#header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    h1{
+
+    h1 {
         text-align: center;
         font-size: 6em;
         background: -webkit-linear-gradient(10deg, $orange-deg, $violet-deg);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        @include mobile(){
+
+        @include mobile() {
             font-size: 3.5em;
         }
-        @include small-mobile(){
+
+        @include small-mobile() {
             font-size: 2em;
         }
-        
+
     }
-    ul{
+
+    ul {
         display: flex;
         justify-content: space-evenly;
         width: 100%;
-        li{
-            a{
-                @include mobile(){
+
+        li {
+            a {
+                @include mobile() {
                     font-size: 0.8em;
                 }
             }
@@ -67,11 +98,8 @@ li{
     }
 }
 
-footer{
+footer {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
 }
-
-
-
