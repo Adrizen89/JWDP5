@@ -1,7 +1,6 @@
+#main-panier {
 
-#main-panier{
-    
-    article{
+    article {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -9,32 +8,44 @@
         border-top: solid 2px $border;
         border-bottom: solid 2px $border;
         margin: 30px 0 30px 0;
-        img{
+
+        img {
             width: 25%;
             box-shadow: 0 1px 20px $shadow-img;
         }
-        h2{
+
+        h2 {
             font-size: 1.4em;
             width: 35%;
         }
-        p{
+
+        p {
             font-size: 1.3em;
             width: 20%;
         }
     }
-    #myForm{
-        div{
+
+    #myForm {
+        div {
             display: flex;
             margin: 30px;
-            label{
+
+            label {
                 width: 25%;
                 text-align: left;
+
+                @include produit-middle() {
+                    font-size: 0.8em;
+                }
             }
-            #mail, #adress{
+
+            #mail,
+            #adress {
                 width: 30%;
             }
         }
-        #btnSubmit{
+
+        #btnSubmit {
             margin-left: 30px;
         }
     }
