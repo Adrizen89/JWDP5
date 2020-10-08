@@ -1,72 +1,96 @@
-
-  
-#main{
+#main {
     background-color: $bg-main;
     margin: 50px;
-    padding: 1px;
+    padding: 10px;
     box-shadow: 0 1px 5px $shadow-main;
-    
-    article{
+
+    @include small-mobile() {
+        margin: 10px;
+    }
+
+
+    article {
         width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         margin: 100px;
-        @include tablet(){
+
+        @include tablet() {
             flex-direction: column;
             width: 70%;
             margin: auto;
             margin-top: 30px;
         }
-        
-        img{
+
+        img {
             width: 20%;
             box-shadow: 0 1px 5px #7A6C57;
             margin-right: 10px;
-            @include tablet(){
+
+            @include tablet() {
                 width: 30%;
             }
-            @include small-mobile(){
-                width: 50%;
+
+            @include mobile() {
+                width: 40%;
+                margin-bottom: 10px;
             }
-            
+
+            @include small-mobile() {
+                width: 50%;
+                margin-bottom: 10px;
+            }
+
+
         }
-        h2{
+
+        h2 {
             width: 33%;
-            @include tablet(){
+
+            @include tablet() {
                 font-size: 1.2em;
             }
-            @include mobile(){
+
+            @include mobile() {
                 font-size: 0.8em;
             }
-            
-            
+
+
         }
-        p{
+
+        p {
             width: 20%;
             font-size: 1.5em;
-            @include tablet(){
+
+            @include tablet() {
                 font-size: 1.2em;
             }
-            @include mobile(){
+
+            @include mobile() {
                 font-size: 0.8em;
             }
         }
-        a{
+
+        a {
             font-size: 1.5em;
             color: black;
             width: 30%;
             margin-right: 10px;
-            @include tablet(){
+
+            @include tablet() {
                 font-size: 1em;
             }
-            @include mobile(){
+
+            @include mobile() {
                 width: 50%;
                 font-size: 0.9em;
+            }
+
+            @include small-mobile() {
+                font-size: 0.8em;
             }
         }
     }
 }
-
-
