@@ -1,5 +1,4 @@
-
-
+//Chiffre du Panier 
 const node = document.getElementById("chiffre");
 if(localStorage.getItem("cpt")){
     node.textContent = localStorage.getItem("cpt");
@@ -8,7 +7,7 @@ else{
     node.textContent = 0;
 }
 
-
+//Affichage de la page confirmation de commande
 let container = document.getElementById("main-confirmation");
 
 let article = document.createElement('article');
