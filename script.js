@@ -11,7 +11,6 @@ const maRequete = new Request('http://localhost:3000/api/furniture/');
 fetch(maRequete)
 .then(response => response.json())
 .then(response =>{
-    console.log(response)
     afficherMeubles(response);
 });
 
