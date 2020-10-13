@@ -10,15 +10,12 @@ else {
 const param = window.location.search
 const params = new URLSearchParams(param)
 const id = params.get("id")
-console.log(id);
 
 var maRequete = new Request('http://localhost:3000/api/furniture/' + id);
 
 fetch(maRequete)
         .then(response => response.json())
         .then(response => {
-                console.log(response)
-
                 //affichage du produit
                 let detailProduit = document.getElementById('detailProduit');
 
