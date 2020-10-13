@@ -149,7 +149,6 @@ window.addEventListener("load", function () {
         })
             .then(response => response.json())
             .then(response => {
-                console.log(response);
                 localStorage.setItem("orderId", response.orderId);
                 localStorage.setItem("total", total);
                 document.location.href = "confirmation.html?orderId=" + response.orderId;
