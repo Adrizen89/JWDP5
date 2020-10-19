@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @mixin tablet {
     @media screen and (max-width : 960px) {
         @content;
@@ -50,15 +49,6 @@
     margin: 0;
     font-family: 'Finger Paint';
     background-color: $color-bg;
-=======
-$bg-article : #FFDFB5;
-
-
-*{
-    margin: 0;
-    font-family: 'Finger Paint';
-    background-color: #FFDFB5;
->>>>>>> ddb3bad05fd38e2dd55727606c5b6a6367d14c58
 }
 
 a {
@@ -66,7 +56,6 @@ a {
     color: black;
 }
 
-<<<<<<< HEAD
 li {
     list-style: none;
 }
@@ -78,10 +67,6 @@ li {
     width: 100%;
 
     h1 {
-=======
-#header{
-    h1{
->>>>>>> ddb3bad05fd38e2dd55727606c5b6a6367d14c58
         text-align: center;
         font-size: 6em;
         background: -webkit-linear-gradient(10deg, $orange-deg, $violet-deg);
@@ -98,7 +83,6 @@ li {
 
     }
 
-<<<<<<< HEAD
     ul {
         display: flex;
         justify-content: space-evenly;
@@ -110,30 +94,6 @@ li {
                     font-size: 0.8em;
                 }
             }
-=======
-#main{
-    article{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 80%;
-        margin-bottom: 50px;
-        box-shadow: 0px 2px 5px #987617;
-        img{
-            width: 20%;
-        }
-        h2{
-            width: 40%;
-            text-align: center;
-        }
-        p{
-            font-size: 1.5em;
-        }
-        a{
-            color: black;
-            font-size: 1.5em;
-            margin-left: 100px;
->>>>>>> ddb3bad05fd38e2dd55727606c5b6a6367d14c58
         }
     }
     
